@@ -10,12 +10,15 @@ define(function(require, exports, module) {
     // 路由Pages
     var pageHome = require('./views/home');
     var pageLogin = require('./views/login');
-
+    var user = require('./views/components/user/user');
+    var qr = require('./views/components/qrcode/qr');
     // 配置路由
     var router = new VueRouter({
         routes: [
             { path: '/', component: pageHome },
-            { path: '/login', component: pageLogin }
+            { path: '/login', component: pageLogin },
+            { path: '/user', component: user },
+            { path: '/qr', component: qr }
         ]
     });
 
